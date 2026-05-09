@@ -1,45 +1,35 @@
-/**
- * Learn more about Light and Dark modes:
- * https://docs.expo.io/guides/color-schemes/
- */
-
-import { Text as DefaultText, View as DefaultView } from 'react-native';
+import {
+  Text as RNText,
+  View as RNView,
+  type TextProps as RNTextProps,
+  type ViewProps as RNViewProps,
+} from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { useColorScheme } from './useColorScheme';
 
-type ThemeProps = {
-  lightColor?: string;
-  darkColor?: string;
-};
+type Tone = 'default' | 'muted' | 'tint' | 'danger' | 'onTint';
 
-export type TextProps = ThemeProps & DefaultText['props'];
-export type ViewProps = ThemeProps & DefaultView['props'];
+export type TextProps = RNTextProps & { tone?: Tone };
+export type ViewProps = RNViewProps;
 
-export function useThemeColor(
-  props: { light?: string; dark?: string },
-  colorName: keyof typeof Colors.light & keyof typeof Colors.dark
-) {
-  const theme = useColorScheme() ?? 'light';
-  const colorFromProps = props[theme];
-
-  if (colorFromProps) {
-    return colorFromProps;
-  } else {
-    return Colors[theme][colorName];
-  }
+export function useTheme() {
+  const scheme = useColorScheme() ?? 'light';
+  return Colors[scheme];
 }
 
-export function Text(props: TextProps) {
-  const { style, lightColor, darkColor, ...otherProps } = props;
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
-
-  return <DefaultText style={[{ color }, style]} {...otherProps} />;
+export function Text({ tone = 'default', style, ...rest }: TextProps) {
+  const c = useTheme();
+  const colorMap = {
+    default: c.text,
+    muted: c.textMuted,
+    tint: c.tint,
+    danger: c.danger,
+    onTint: c.onTint,
+  } as const;
+  return <RNText style={[{ color: colorMap[tone] }, style]} {...rest} />;
 }
 
-export function View(props: ViewProps) {
-  const { style, lightColor, darkColor, ...otherProps } = props;
-  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
-
-  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+export function View({ style, ...rest }: ViewProps) {
+  return <RNView style={style} {...rest} />;
 }

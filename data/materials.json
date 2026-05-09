@@ -1,0 +1,147 @@
+{
+  "_comentario": "Catálogo de materiales y códigos de identificación de resina (SPI). Reciclabilidad ajustada a Chile.",
+  "codigos_resina": {
+    "1": {
+      "id": "pet",
+      "nombre": "PET",
+      "nombre_largo": "Polietileno Tereftalato",
+      "ejemplos": ["botellas de bebida", "envases de aceite", "envases transparentes"],
+      "reciclable_chile": true,
+      "destino": ["punto-limpio", "punto-verde", "movil"],
+      "consejo": "Vacíalo, enjuágalo y aplástalo. Bota la tapa por separado."
+    },
+    "2": {
+      "id": "hdpe",
+      "nombre": "HDPE",
+      "nombre_largo": "Polietileno de Alta Densidad",
+      "ejemplos": ["botellas de shampoo", "botellas de detergente", "envases de leche opacos"],
+      "reciclable_chile": true,
+      "destino": ["punto-verde"],
+      "consejo": "Enjuaga bien y deposita en Punto Verde (los puntos limpios estándar no siempre lo aceptan)."
+    },
+    "3": {
+      "id": "pvc",
+      "nombre": "PVC",
+      "nombre_largo": "Cloruro de Polivinilo",
+      "ejemplos": ["tuberías", "blísters", "envases de aceite rígido"],
+      "reciclable_chile": false,
+      "destino": ["basura_comun"],
+      "consejo": "No es reciclable en Chile. Va a basura común."
+    },
+    "4": {
+      "id": "ldpe",
+      "nombre": "LDPE",
+      "nombre_largo": "Polietileno de Baja Densidad",
+      "ejemplos": ["bolsas plásticas", "film transparente", "bolsas de pan"],
+      "reciclable_chile": true,
+      "destino": ["punto-verde"],
+      "consejo": "Acumula bolsas limpias y secas; deposítalas en Punto Verde."
+    },
+    "5": {
+      "id": "pp",
+      "nombre": "PP",
+      "nombre_largo": "Polipropileno",
+      "ejemplos": ["envases de yogurt", "tapas de botellas", "bandejas microondas"],
+      "reciclable_chile": "parcial",
+      "destino": ["punto-verde"],
+      "consejo": "Sólo PP rígido se recicla en Chile (envases firmes). PP flexible no."
+    },
+    "6": {
+      "id": "ps",
+      "nombre": "PS",
+      "nombre_largo": "Poliestireno",
+      "ejemplos": ["plumavit", "bandejas de carne", "vasos desechables"],
+      "reciclable_chile": false,
+      "destino": ["basura_comun"],
+      "consejo": "No es reciclable en Chile. Va a basura común."
+    },
+    "7": {
+      "id": "otros",
+      "nombre": "OTROS",
+      "nombre_largo": "Otros plásticos (PC, PLA, ABS, etc.)",
+      "ejemplos": ["envases multicapa", "policarbonato", "bioplásticos"],
+      "reciclable_chile": false,
+      "destino": ["basura_comun"],
+      "consejo": "Mezcla de resinas no reciclables masivamente. Va a basura común."
+    }
+  },
+  "categorias": {
+    "papel": {
+      "id": "papel",
+      "nombre": "Papel",
+      "ejemplos": ["hojas", "diarios", "revistas"],
+      "destino": ["punto-limpio", "punto-verde", "movil"],
+      "consejo": "Limpio y seco. No mezclar con cartón con grasa (caja de pizza) — esa va a basura."
+    },
+    "carton": {
+      "id": "carton",
+      "nombre": "Cartón",
+      "ejemplos": ["cajas", "embalajes corrugados"],
+      "destino": ["punto-limpio", "punto-verde", "movil"],
+      "consejo": "Aplánalo para optimizar el contenedor."
+    },
+    "vidrio": {
+      "id": "vidrio",
+      "nombre": "Vidrio",
+      "ejemplos": ["botellas", "frascos"],
+      "destino": ["punto-limpio", "punto-verde", "movil"],
+      "consejo": "Sin tapa. Enjuagado. Evita vidrios planos (ventanas) — esos no van."
+    },
+    "tetrapak": {
+      "id": "tetrapak",
+      "nombre": "TetraPak",
+      "ejemplos": ["cajas de leche", "cajas de jugo", "cajas de vino"],
+      "destino": ["punto-limpio", "punto-verde", "movil"],
+      "consejo": "Enjuagado y aplastado. Tapa va por separado."
+    },
+    "latas_aluminio": {
+      "id": "latas_aluminio",
+      "nombre": "Latas de aluminio",
+      "ejemplos": ["latas de bebida", "latas de cerveza"],
+      "destino": ["punto-verde", "movil"],
+      "consejo": "Enjuagadas. Aplastadas si puedes."
+    },
+    "latas_acero": {
+      "id": "latas_acero",
+      "nombre": "Latas de acero",
+      "ejemplos": ["latas de conserva", "latas de atún"],
+      "destino": ["punto-verde"],
+      "consejo": "Enjuagadas, sin etiqueta si es posible."
+    },
+    "aceite_cocina": {
+      "id": "aceite_cocina",
+      "nombre": "Aceite de cocina usado",
+      "ejemplos": ["aceite de fritura usado"],
+      "destino": ["punto-verde", "movil"],
+      "consejo": "En botella plástica cerrada. NUNCA por el desagüe."
+    },
+    "pilas": {
+      "id": "pilas",
+      "nombre": "Pilas y baterías",
+      "ejemplos": ["pilas AA", "AAA", "baterías de litio pequeñas"],
+      "destino": ["pilas"],
+      "consejo": "Contenedores específicos. NO van a basura común — son residuos peligrosos."
+    },
+    "electronicos_pequenos": {
+      "id": "electronicos_pequenos",
+      "nombre": "Electrónicos pequeños",
+      "ejemplos": ["cables", "audífonos", "cargadores"],
+      "destino": ["punto-verde"],
+      "consejo": "Sólo Punto Verde acepta electrónicos pequeños."
+    },
+    "organico": {
+      "id": "organico",
+      "nombre": "Residuos orgánicos",
+      "ejemplos": ["restos de comida", "cáscaras", "borra de café"],
+      "destino": ["organicos"],
+      "consejo": "Inscríbete al programa de retiro puerta a puerta de Las Condes."
+    },
+    "basura_comun": {
+      "id": "basura_comun",
+      "nombre": "Basura común",
+      "ejemplos": ["plásticos no reciclables", "papel sucio", "pañales"],
+      "destino": ["basura_comun"],
+      "consejo": "Va al contenedor regular de tu domicilio."
+    }
+  }
+}
