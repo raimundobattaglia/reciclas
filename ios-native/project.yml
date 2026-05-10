@@ -1,0 +1,41 @@
+name: RecicLas
+options:
+  bundleIdPrefix: cl.reciclas
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: es
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""
+    GENERATE_INFOPLIST_FILE: YES
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: "0.1.0"
+
+targets:
+  RecicLas:
+    type: application
+    platform: iOS
+    sources:
+      - path: RecicLas/Sources
+      - path: RecicLas/Resources
+        type: folder
+      - path: RecicLas/Assets.xcassets
+    info:
+      path: RecicLas/Info.plist
+      properties:
+        CFBundleDisplayName: RecicLas
+        UILaunchScreen:
+          UIColorName: AccentColor
+        NSCameraUsageDescription: RecicLas necesita acceso a la cámara para escanear códigos de barra de productos y reconocer símbolos de reciclaje.
+        NSLocationWhenInUseUsageDescription: RecicLas usa tu ubicación para mostrarte los puntos limpios más cercanos.
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: false
+        UIBackgroundModes: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: cl.reciclas.app
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO

@@ -12,8 +12,14 @@ web-build/
 expo-env.d.ts
 
 # Native generated folders
-/ios
 /android
+
+# iOS native (Swift) generated artifacts
+ios-native/RecicLas.xcodeproj/xcuserdata/
+ios-native/RecicLas.xcodeproj/project.xcworkspace/xcuserdata/
+ios-native/build/
+ios-native/DerivedData/
+ios-native/RecicLas/Info.plist
 .kotlin/
 *.orig.*
 *.jks

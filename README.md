@@ -4,62 +4,78 @@ App para fomentar la cultura de reciclaje en Chile, partiendo por la comuna de *
 
 Escanea el código de barras de un producto y la app te dice de qué materiales está hecho su envase y a qué punto limpio llevarlo.
 
-## Plataformas
+## Dos plataformas, dos codebases
 
-- **iOS** — app nativa (Expo / React Native)
-- **Web** — misma base de código, corre en navegador con todas las pantallas
+| | Web | iOS |
+|---|---|---|
+| Código | `app/`, `components/`, `lib/`, `data/` (Expo Router + RN Web) | `ios-native/` (SwiftUI + MapKit + VisionKit) |
+| Lenguaje | TypeScript | Swift |
+| Mapa | Leaflet + OpenStreetMap | MapKit nativo |
+| Escáner | (no aplica — input manual) | DataScannerViewController |
+| Persistencia | localStorage | UserDefaults |
 
-## Stack
+Los JSONs de **`data/`** son la fuente de verdad. La app iOS los copia a `ios-native/RecicLas/Resources/`.
 
-- Expo (SDK 54) + Expo Router
-- React Native + React Native Web
-- TypeScript
-- Leaflet + OpenStreetMap (mapa web — gratis, sin API key)
-- Open Food Facts API + UPCitemdb como fallback (datos de productos)
-- expo-camera para escaneo en iOS
-- expo-location para ordenar puntos por cercanía
-
-## Arrancar local
+## Web
 
 ```bash
-# Requisitos: Node 20+ y, para iOS, Expo Go instalado en el iPhone
 npm install
-npx expo start --web      # versión web en localhost:8081
-npx expo start             # iOS — escanea el QR con Expo Go
+npx expo start --web      # localhost:8081
 ```
 
-## Estructura
+Stack: Expo (SDK 54) + Expo Router + React Native Web + TypeScript + Leaflet + Plus Jakarta Sans.
+
+### Estructura web
 
 ```
 app/                   # Pantallas (Expo Router)
-  (tabs)/              # Tabs: Inicio · Escanear · Puntos
-  resultado/[barcode]  # Detalle de producto escaneado
-  material/[id]        # Detalle de cada material
+  (tabs)/              # Inicio · Escanear · Puntos
+  resultado/[barcode]  # Resultado del escaneo
+  material/[id]        # Detalle de material
   punto/[id]           # Detalle de punto limpio
+  historial.tsx        # Historial de escaneos
 components/
-  ui/                  # Sistema de diseño (Card, Button, Pill, Icon, MapView)
-  Themed.tsx           # Texto y colores por tema
-data/
-  clean-points.json    # 9 puntos de Las Condes con coords y materiales
-  materials.json       # Códigos de resina 1-7 + categorías + reciclabilidad CL
-lib/
-  productLookup.ts     # Cascada Open Food Facts → UPCitemdb
-  data.ts              # Helpers de catálogo (tipados)
-  distance.ts          # Haversine + formateo
+  Themed.tsx
+  ui/                  # Card, Button, Pill, Icon, MapView, Mascot, Decorative
+data/                  # JSONs compartidos (puntos limpios, materiales, productos chilenos)
+lib/                   # productLookup, scanHistory, distance, data
 ```
+
+## iOS (Swift native)
+
+Ver [ios-native/README.md](./ios-native/README.md) para detalles. Resumen:
+
+```bash
+brew install xcodegen        # primera vez
+cd ios-native
+xcodegen                     # genera RecicLas.xcodeproj
+open RecicLas.xcodeproj      # abre en Xcode 15+, target iOS 17+
+```
+
+Stack: SwiftUI + MapKit + VisionKit (DataScanner) + CoreLocation. Sin dependencias externas.
 
 ## Datos
 
-- **Puntos limpios**: 8 puntos fijos + Punto Verde de Las Condes. Las direcciones del JSON son aproximadas y conviene afinarlas con coordenadas exactas antes de publicar.
-- **Códigos de resina (SPI)**: 1-7. En Chile sólo se reciclan masivamente PET (1), HDPE (2), LDPE (4) y PP rígido (5). El resto va a basura común.
+- **Puntos limpios**: 8 puntos fijos + Punto Verde de Las Condes. Coords aproximadas — hay que afinar antes de publicar.
+- **Códigos de resina (SPI)**: 1-7. En Chile sólo se reciclan masivamente PET (1), HDPE (2), LDPE (4) y PP rígido (5).
+- **Productos chilenos**: catálogo curado en `data/local-products.json` que se consulta antes que las APIs externas. Crece con cada PR.
+
+## Lookup de productos (en cascada)
+
+1. Catálogo local (`data/local-products.json`) — productos chilenos curados
+2. [Open Food Facts](https://world.openfoodfacts.org/) — base mundial gratis
+3. [UPCitemdb trial](https://www.upcitemdb.com/) — fallback sin auth
+
+Si ninguna lo encuentra, la app igual ofrece selector visual de envases para que el usuario elija a mano.
 
 ## Próximos pasos
 
-- Afinar coordenadas exactas de cada punto limpio
-- `react-native-maps` en iOS (hoy sólo el web tiene mapa interactivo)
-- Modo offline / caché de productos escaneados
-- Reconocimiento del triángulo de reciclaje por foto (OCR del número)
-- Expandir a más comunas (Providencia, Vitacura, Lo Barnechea)
+- Afinar coordenadas reales de cada punto limpio
+- Expandir catálogo de productos chilenos (escanear y aportar PR)
+- App Icon real para iOS
+- Modo oscuro pulido
+- Reconocimiento del triángulo por foto (OCR)
+- Expandir a otras comunas (Providencia, Vitacura, Lo Barnechea)
 
 ## Licencia
 

@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B488B179460CEA80F678F7 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D35BA0418D19D537450704D /* Catalog.swift */; };
+		1AB58802450EF2FFB06C35E2 /* RecicLasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D79A37A3DF46396D99D17 /* RecicLasApp.swift */; };
+		1FADB01CC577E4F5992AAF1B /* ScanHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE772EAF668249C1567C52 /* ScanHistoryStore.swift */; };
+		293050B26C3496F28A6A9EC4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DDCE654CA0264440973225 /* HomeView.swift */; };
+		2D8D059C5290D0AC544E8429 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = D36A423BC46F3AF6ECCB8E8C /* Resources */; };
+		321FB2BB04A618285B1B2281 /* MascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4080B0A390592C6085A4D49 /* MascotView.swift */; };
+		55AFC1D7C09FA883EAF819E1 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7222257110E5DDE3DA061D /* PointsView.swift */; };
+		5AAE44A68FD49932A60D7650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200F60C5624D3D445F5E723A /* Assets.xcassets */; };
+		7F76D848AD6D16D48314CEF5 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4BA8E642F0829DBBCAE20 /* HistoryView.swift */; };
+		811AEA3616C9365DE4B5D487 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE9B8D056D8570931BEF7 /* Models.swift */; };
+		94A7423BB1A3DE98D04FA77A /* ProductLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D95F6D80053653E5BD5A399 /* ProductLookup.swift */; };
+		9F1F7D038771A35E9A503EC1 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51CC7A4EDDA65B8424567C /* ScanView.swift */; };
+		A03DE470503A92338286BB4B /* MaterialDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBB2D33F92FE0A7C5B3FB38 /* MaterialDetailView.swift */; };
+		AEB4468D4B543613176C243E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B120A7FD1916FEA6FA94C4 /* Theme.swift */; };
+		B5C4D2355B04268B8BF8710C /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B52AED15EA7DFAA53DDBA /* RootTabView.swift */; };
+		E740D5A7B09C540F7F4A3967 /* PointDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C62BC93DBA81A4DF384C1 /* PointDetailView.swift */; };
+		EF9A83A2F77E409B33933062 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD25342C6780FE40D32246 /* ScanResultView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		149C62BC93DBA81A4DF384C1 /* PointDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointDetailView.swift; sourceTree = "<group>"; };
+		1D35BA0418D19D537450704D /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		200F60C5624D3D445F5E723A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33BD25342C6780FE40D32246 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
+		5A51CC7A4EDDA65B8424567C /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		6BBB2D33F92FE0A7C5B3FB38 /* MaterialDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDetailView.swift; sourceTree = "<group>"; };
+		75A4BA8E642F0829DBBCAE20 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		775D79A37A3DF46396D99D17 /* RecicLasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecicLasApp.swift; sourceTree = "<group>"; };
+		7D95F6D80053653E5BD5A399 /* ProductLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLookup.swift; sourceTree = "<group>"; };
+		841FE9B8D056D8570931BEF7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8E056EF8828F561C9D936546 /* RecicLas.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RecicLas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CEE772EAF668249C1567C52 /* ScanHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryStore.swift; sourceTree = "<group>"; };
+		A4080B0A390592C6085A4D49 /* MascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotView.swift; sourceTree = "<group>"; };
+		AE7222257110E5DDE3DA061D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		B7B120A7FD1916FEA6FA94C4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D36A423BC46F3AF6ECCB8E8C /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = RecicLas/Resources; sourceTree = SOURCE_ROOT; };
+		D4DDCE654CA0264440973225 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F89B52AED15EA7DFAA53DDBA /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		102C88983CB9406A8F155BCF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A4080B0A390592C6085A4D49 /* MascotView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		33C9AC2FF9D2F61A8D59DCF9 = {
+			isa = PBXGroup;
+			children = (
+				D36A423BC46F3AF6ECCB8E8C /* Resources */,
+				7B21F5CE42F83F53E967E5DF /* RecicLas */,
+				D5BBD73F4D289173745E592B /* Sources */,
+				D5EC42CB7EA57E99A01AE187 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D6C2A626EF08013D111BE8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75A4BA8E642F0829DBBCAE20 /* HistoryView.swift */,
+				D4DDCE654CA0264440973225 /* HomeView.swift */,
+				6BBB2D33F92FE0A7C5B3FB38 /* MaterialDetailView.swift */,
+				149C62BC93DBA81A4DF384C1 /* PointDetailView.swift */,
+				AE7222257110E5DDE3DA061D /* PointsView.swift */,
+				33BD25342C6780FE40D32246 /* ScanResultView.swift */,
+				5A51CC7A4EDDA65B8424567C /* ScanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B21F5CE42F83F53E967E5DF /* RecicLas */ = {
+			isa = PBXGroup;
+			children = (
+				200F60C5624D3D445F5E723A /* Assets.xcassets */,
+			);
+			path = RecicLas;
+			sourceTree = "<group>";
+		};
+		856ABB8BEA4F5684F8E54AD0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				775D79A37A3DF46396D99D17 /* RecicLasApp.swift */,
+				F89B52AED15EA7DFAA53DDBA /* RootTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		89183EA2A6DEE358309B15FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D35BA0418D19D537450704D /* Catalog.swift */,
+				7D95F6D80053653E5BD5A399 /* ProductLookup.swift */,
+				9CEE772EAF668249C1567C52 /* ScanHistoryStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		90FC651316E086ED1ADDB1D9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B7B120A7FD1916FEA6FA94C4 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D5BBD73F4D289173745E592B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				856ABB8BEA4F5684F8E54AD0 /* App */,
+				102C88983CB9406A8F155BCF /* Components */,
+				EEB44906DD4DF199BA762499 /* Models */,
+				89183EA2A6DEE358309B15FB /* Services */,
+				90FC651316E086ED1ADDB1D9 /* Theme */,
+				3D6C2A626EF08013D111BE8E /* Views */,
+			);
+			name = Sources;
+			path = RecicLas/Sources;
+			sourceTree = "<group>";
+		};
+		D5EC42CB7EA57E99A01AE187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E056EF8828F561C9D936546 /* RecicLas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEB44906DD4DF199BA762499 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				841FE9B8D056D8570931BEF7 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCC5CC4F4F39311A5AF5BB36 /* RecicLas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A61D75F12B296F0783F70E1 /* Build configuration list for PBXNativeTarget "RecicLas" */;
+			buildPhases = (
+				26AA550F00F7613B407D5A96 /* Sources */,
+				CD719FC44543C0E905A10903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecicLas;
+			packageProductDependencies = (
+			);
+			productName = RecicLas;
+			productReference = 8E056EF8828F561C9D936546 /* RecicLas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA783794563DBBA7C7F4DBA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BCC5CC4F4F39311A5AF5BB36 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 37CB0310E03DA6D681F71414 /* Build configuration list for PBXProject "RecicLas" */;
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				es,
+			);
+			mainGroup = 33C9AC2FF9D2F61A8D59DCF9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D5EC42CB7EA57E99A01AE187 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCC5CC4F4F39311A5AF5BB36 /* RecicLas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD719FC44543C0E905A10903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AAE44A68FD49932A60D7650 /* Assets.xcassets in Resources */,
+				2D8D059C5290D0AC544E8429 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26AA550F00F7613B407D5A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B488B179460CEA80F678F7 /* Catalog.swift in Sources */,
+				7F76D848AD6D16D48314CEF5 /* HistoryView.swift in Sources */,
+				293050B26C3496F28A6A9EC4 /* HomeView.swift in Sources */,
+				321FB2BB04A618285B1B2281 /* MascotView.swift in Sources */,
+				A03DE470503A92338286BB4B /* MaterialDetailView.swift in Sources */,
+				811AEA3616C9365DE4B5D487 /* Models.swift in Sources */,
+				E740D5A7B09C540F7F4A3967 /* PointDetailView.swift in Sources */,
+				55AFC1D7C09FA883EAF819E1 /* PointsView.swift in Sources */,
+				94A7423BB1A3DE98D04FA77A /* ProductLookup.swift in Sources */,
+				1AB58802450EF2FFB06C35E2 /* RecicLasApp.swift in Sources */,
+				B5C4D2355B04268B8BF8710C /* RootTabView.swift in Sources */,
+				1FADB01CC577E4F5992AAF1B /* ScanHistoryStore.swift in Sources */,
+				EF9A83A2F77E409B33933062 /* ScanResultView.swift in Sources */,
+				9F1F7D038771A35E9A503EC1 /* ScanView.swift in Sources */,
+				AEB4468D4B543613176C243E /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2AF4D7445A1774F8C246B76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RecicLas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cl.reciclas.app;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		882F2F3D14382FF231B8D21B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		95D0D0A3E78110BEB9F3AAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		A79D555196B06EB6AC5E4D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RecicLas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cl.reciclas.app;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A61D75F12B296F0783F70E1 /* Build configuration list for PBXNativeTarget "RecicLas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79D555196B06EB6AC5E4D94 /* Debug */,
+				2AF4D7445A1774F8C246B76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37CB0310E03DA6D681F71414 /* Build configuration list for PBXProject "RecicLas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882F2F3D14382FF231B8D21B /* Debug */,
+				95D0D0A3E78110BEB9F3AAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA783794563DBBA7C7F4DBA3 /* Project object */;
+}

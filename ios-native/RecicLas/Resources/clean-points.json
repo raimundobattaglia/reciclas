@@ -1,0 +1,119 @@
+{
+  "_comentario": "Puntos limpios de Las Condes. Coords aproximadas - VERIFICAR antes de publicar. Fuente: lascondes.cl/las-condes-verde/reciclaje/puntos-limpios/",
+  "_actualizado": "2026-05-09",
+  "puntos": [
+    {
+      "id": "rotonda-atenas",
+      "nombre": "Punto Limpio Rotonda Atenas",
+      "direccion": "IV Centenario / Av. Apoquindo, Rotonda Atenas",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4078,
+      "lng": -70.5687,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "plaza-filipinas",
+      "nombre": "Punto Limpio Plaza Filipinas",
+      "direccion": "Canumanqui esquina Filipinas",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4115,
+      "lng": -70.5520,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "parque-monte-grande",
+      "nombre": "Punto Limpio Parque Monte Grande",
+      "direccion": "Parque Monte Grande",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4032,
+      "lng": -70.5478,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "cantagallo",
+      "nombre": "Punto Limpio Cantagallo",
+      "direccion": "Av. Nueva Las Condes / Cantagallo",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4076,
+      "lng": -70.5402,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "camino-observatorio",
+      "nombre": "Punto Limpio Camino del Observatorio",
+      "direccion": "Av. Las Condes alt. 15.000, Camino del Observatorio",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.3624,
+      "lng": -70.5210,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "francisco-bilbao",
+      "nombre": "Punto Limpio Bandejón Central Francisco Bilbao",
+      "direccion": "Av. Francisco Bilbao, bandejón central",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4221,
+      "lng": -70.5660,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "alonso-cordova",
+      "nombre": "Punto Limpio Alonso de Córdova",
+      "direccion": "Cerro Colorado 5051 / Alonso de Córdova",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4055,
+      "lng": -70.5798,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "parque-araucano",
+      "nombre": "Punto Limpio Parque Araucano",
+      "direccion": "Parque Araucano",
+      "comuna": "Las Condes",
+      "horario": "Mar a Dom 09:00-20:00",
+      "lat": -33.4035,
+      "lng": -70.5817,
+      "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak"],
+      "tipo": "fijo"
+    },
+    {
+      "id": "punto-verde",
+      "nombre": "Punto Verde Las Condes",
+      "direccion": "Av. Padre Hurtado Norte 1801",
+      "comuna": "Las Condes",
+      "horario": "Lun a Vie 08:30-18:00, Sáb 09:00-13:00",
+      "lat": -33.4040,
+      "lng": -70.5570,
+      "materiales": ["papel", "carton", "pet", "hdpe", "ldpe", "pp_rigido", "vidrio", "tetrapak", "latas_aluminio", "latas_acero", "aceite_cocina", "pilas", "electronicos_pequenos"],
+      "tipo": "punto_verde",
+      "notas": "Recibe más tipos de material que los puntos limpios estándar. Los aportes apoyan a fundaciones."
+    }
+  ],
+  "moviles": {
+    "descripcion": "Puntos Limpios Móviles de Las Condes — circulan de Lun a Sáb por distintos sectores",
+    "materiales": ["papel", "carton", "pet", "vidrio", "tetrapak", "latas_aluminio", "aceite_cocina"],
+    "info": "Consultar calendario semanal en lascondes.cl/las-condes-verde/reciclaje/punto-limpios-moviles/"
+  },
+  "organicos": {
+    "descripcion": "Programa de retiro puerta a puerta de residuos orgánicos",
+    "info": "Inscripción en lascondesorganico.cl"
+  },
+  "pilas": {
+    "descripcion": "8 contenedores específicos para pilas distribuidos en la comuna",
+    "info": "Ver mapa en sitio municipal"
+  }
+}
