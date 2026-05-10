@@ -1,3 +1,4 @@
+import localDb from '@/data/local-products.json';
 import type { MaterialId } from './data';
 
 export interface Product {
@@ -5,8 +6,9 @@ export interface Product {
   name?: string;
   brand?: string;
   image?: string;
-  source: 'openfoodfacts' | 'upcitemdb';
+  source: 'local' | 'openfoodfacts' | 'upcitemdb';
   packagingRaw?: string;
+  notes?: string;
   inferredMaterials: MaterialId[];
 }
 
@@ -50,10 +52,27 @@ function inferFromText(raw: string): MaterialId[] {
   if (r.includes('aluminio') || r.includes('aluminium') || r.includes('lata de bebida') || r.includes('beverage can')) found.add('latas_aluminio');
   if (r.includes('lata') || r.includes('can') || r.includes('tin')) found.add('latas_acero');
   if (r.includes('plástico') || r.includes('plastic') || r.includes('pet') || r.includes('botella')) found.add('pet');
-  if (r.includes('hdpe') || r.includes('peAD') || r.includes('polietileno alta')) found.add('hdpe');
-  if (r.includes('ldpe') || r.includes('peBD') || r.includes('bolsa')) found.add('ldpe');
-  if (r.includes('polipropileno') || r.includes('polypropylene') || r.includes('pp ')) found.add('pp');
+  if (r.includes('hdpe') || r.includes('pead') || r.includes('polietileno alta')) found.add('hdpe');
+  if (r.includes('ldpe') || r.includes('pebd') || r.includes('bolsa')) found.add('ldpe');
+  if (r.includes('polipropileno') || r.includes('polypropylene')) found.add('pp');
   return Array.from(found);
+}
+
+function tryLocal(barcode: string): Product | null {
+  const productos = (localDb as any).productos as Record<
+    string,
+    { name: string; brand?: string; materials: MaterialId[]; notes?: string }
+  >;
+  const hit = productos[barcode];
+  if (!hit) return null;
+  return {
+    barcode,
+    name: hit.name,
+    brand: hit.brand,
+    source: 'local',
+    notes: hit.notes,
+    inferredMaterials: hit.materials,
+  };
 }
 
 async function tryOpenFoodFacts(barcode: string): Promise<Product | null> {
@@ -71,8 +90,7 @@ async function tryOpenFoodFacts(barcode: string): Promise<Product | null> {
     const m = TAG_TO_MATERIAL[tag];
     if (m) found.add(m);
   }
-  const fromText = inferFromText(`${p.packaging || ''} ${p.categories || ''}`);
-  fromText.forEach((m) => found.add(m));
+  inferFromText(`${p.packaging || ''} ${p.categories || ''}`).forEach((m) => found.add(m));
   return {
     barcode,
     name: p.product_name,
@@ -85,7 +103,6 @@ async function tryOpenFoodFacts(barcode: string): Promise<Product | null> {
 }
 
 async function tryUpcItemDb(barcode: string): Promise<Product | null> {
-  // Free trial endpoint, no auth, ~100 req/day per IP
   const url = `https://api.upcitemdb.com/prod/trial/lookup?upc=${encodeURIComponent(barcode)}`;
   const res = await fetch(url);
   if (!res.ok) return null;
@@ -105,6 +122,8 @@ async function tryUpcItemDb(barcode: string): Promise<Product | null> {
 }
 
 export async function lookupProduct(barcode: string): Promise<Product | null> {
+  const local = tryLocal(barcode);
+  if (local) return local;
   try {
     const off = await tryOpenFoodFacts(barcode);
     if (off) return off;

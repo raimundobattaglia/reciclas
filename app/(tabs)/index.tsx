@@ -126,6 +126,27 @@ export default function HomeScreen() {
         </View>
       </View>
 
+      <View style={styles.section}>
+        <Link href="/historial" asChild>
+          <Pressable>
+            <Card>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <View style={[styles.bigIcon, { backgroundColor: c.tintSoft }]}>
+                  <Icon name="list" size={20} color={c.tint} />
+                </View>
+                <View style={{ flex: 1, marginLeft: 14 }}>
+                  <Text style={{ fontWeight: '800', fontSize: 16 }}>Tus escaneos</Text>
+                  <Text tone="muted" style={{ fontSize: 13, marginTop: 2 }}>
+                    Vuelve a ver los productos que ya escaneaste
+                  </Text>
+                </View>
+                <Icon name="chevronRight" size={18} color={c.textMuted} />
+              </View>
+            </Card>
+          </Pressable>
+        </Link>
+      </View>
+
       <View style={[styles.section, { paddingBottom: 40 }]}>
         <Card>
           <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
@@ -221,6 +242,13 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bigIcon: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
   },

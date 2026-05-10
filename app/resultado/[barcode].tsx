@@ -9,6 +9,7 @@ import { Icon } from '@/components/ui/Icon';
 import { Pill } from '@/components/ui/Pill';
 import { findCleanPointsForMaterial, getMaterial, type MaterialId } from '@/lib/data';
 import { lookupProduct, type Product } from '@/lib/productLookup';
+import { addToHistory } from '@/lib/scanHistory';
 
 type State =
   | { kind: 'loading' }
@@ -27,7 +28,25 @@ export default function ResultadoScreen() {
     lookupProduct(barcode)
       .then((product) => {
         if (cancelled) return;
-        setState(product ? { kind: 'found', product } : { kind: 'not_found' });
+        if (product) {
+          setState({ kind: 'found', product });
+          addToHistory({
+            barcode,
+            name: product.name,
+            brand: product.brand,
+            materials: product.inferredMaterials,
+            source: product.source,
+            scannedAt: Date.now(),
+          });
+        } else {
+          setState({ kind: 'not_found' });
+          addToHistory({
+            barcode,
+            materials: [],
+            source: 'unknown',
+            scannedAt: Date.now(),
+          });
+        }
       })
       .catch((err) => {
         if (cancelled) return;

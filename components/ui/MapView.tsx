@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { Text, useTheme } from '@/components/Themed';
 import { Icon } from './Icon';
@@ -12,7 +12,6 @@ export type MapMarker = {
 
 export function MapView({
   markers,
-  onMarkerPress,
   center,
 }: {
   markers: MapMarker[];
@@ -20,43 +19,65 @@ export function MapView({
   center?: { lat: number; lng: number };
 }) {
   const c = useTheme();
+
+  const openExternal = () => {
+    if (markers.length === 0) return;
+    const target = markers[0];
+    const lat = center?.lat ?? target.lat;
+    const lng = center?.lng ?? target.lng;
+    const url =
+      Platform.OS === 'ios'
+        ? `http://maps.apple.com/?ll=${lat},${lng}&q=${encodeURIComponent(target.label)}`
+        : `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    Linking.openURL(url);
+  };
+
   return (
     <View
       style={[
         styles.container,
         { backgroundColor: c.tintSoft, borderColor: c.border },
       ]}>
-      <View style={[styles.grid, { borderColor: c.border }]} />
-      <View style={styles.pinList}>
-        <Icon name="map" size={32} color={c.tint} />
-        <Text style={[styles.label, { color: c.tint }]}>Vista de mapa</Text>
-        <Text tone="muted" style={styles.sub}>
-          Disponible en la versión web. En iOS toca un punto y abre Mapas.
+      <Icon name="map" size={36} color={c.tint} />
+      <Text style={[styles.title, { color: c.tintStrong }]}>
+        {markers.length > 1
+          ? `${markers.length} puntos en Las Condes`
+          : 'Punto limpio'}
+      </Text>
+      <Text tone="muted" style={styles.sub}>
+        Abre tu app de Mapas para ver y trazar la ruta.
+      </Text>
+      <Pressable
+        onPress={openExternal}
+        style={({ pressed }) => [
+          styles.btn,
+          { backgroundColor: c.tint, opacity: pressed ? 0.9 : 1 },
+        ]}>
+        <Icon name="external" size={14} color={c.onTint} />
+        <Text style={{ color: c.onTint, fontWeight: '700', marginLeft: 8 }}>
+          Abrir en Mapas
         </Text>
-      </View>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    height: 220,
+    paddingVertical: 26,
+    paddingHorizontal: 18,
     borderRadius: 18,
     borderWidth: 1,
-    overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'center',
     marginBottom: 16,
   },
-  grid: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    opacity: 0.3,
+  title: { fontWeight: '800', fontSize: 16, marginTop: 8 },
+  sub: { fontSize: 13, marginTop: 4, marginBottom: 14, textAlign: 'center' },
+  btn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 18,
+    paddingVertical: 10,
+    borderRadius: 999,
   },
-  pinList: { alignItems: 'center', padding: 18 },
-  label: { fontWeight: '700', marginTop: 6 },
-  sub: { fontSize: 13, marginTop: 4, textAlign: 'center' },
 });

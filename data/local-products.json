@@ -1,0 +1,170 @@
+{
+  "_comentario": "Productos chilenos comunes — base curada que se consulta ANTES que Open Food Facts y UPCitemdb. Los códigos de barra (EAN-13) son aproximados/de ejemplo: hay que reemplazarlos por los reales escaneando los productos en el supermercado y haciendo PR.",
+  "_fuente": "Catálogo manual basado en supermercados chilenos típicos (Jumbo, Líder, Tottus).",
+  "_como_aportar": "Escanea un producto, copia el código que aparece en pantalla, agrega entrada acá con: { name, brand, materials, notes? }",
+  "productos": {
+    "7802001000018": {
+      "name": "Coca-Cola 1.5L",
+      "brand": "Coca-Cola",
+      "materials": ["pet"],
+      "notes": "Botella PET retornable o no retornable. Tapa PE."
+    },
+    "7802001000025": {
+      "name": "Coca-Cola 350ml lata",
+      "brand": "Coca-Cola",
+      "materials": ["latas_aluminio"]
+    },
+    "7802001000032": {
+      "name": "Sprite 1.5L",
+      "brand": "Sprite",
+      "materials": ["pet"]
+    },
+    "7802001000049": {
+      "name": "Fanta 1.5L",
+      "brand": "Fanta",
+      "materials": ["pet"]
+    },
+    "7800000000017": {
+      "name": "Cerveza Cristal 350ml",
+      "brand": "CCU",
+      "materials": ["vidrio"],
+      "notes": "Botella retornable preferentemente."
+    },
+    "7800000000024": {
+      "name": "Cerveza Cristal lata 350ml",
+      "brand": "CCU",
+      "materials": ["latas_aluminio"]
+    },
+    "7800000000031": {
+      "name": "Cerveza Escudo 350ml",
+      "brand": "CCU",
+      "materials": ["vidrio"]
+    },
+    "7802950000019": {
+      "name": "Agua Vital sin gas 1.5L",
+      "brand": "Vital",
+      "materials": ["pet"]
+    },
+    "7802950000026": {
+      "name": "Agua Benedictino 1.5L",
+      "brand": "Benedictino",
+      "materials": ["pet"]
+    },
+    "7806500000018": {
+      "name": "Leche Soprole entera 1L",
+      "brand": "Soprole",
+      "materials": ["tetrapak"],
+      "notes": "Caja TetraPak. Tapa HDPE."
+    },
+    "7806500000025": {
+      "name": "Leche Colun entera 1L",
+      "brand": "Colun",
+      "materials": ["tetrapak"]
+    },
+    "7806500000032": {
+      "name": "Leche Loncoleche entera 1L",
+      "brand": "Loncoleche",
+      "materials": ["tetrapak"]
+    },
+    "7806500000049": {
+      "name": "Yogurt Soprole 120g",
+      "brand": "Soprole",
+      "materials": ["pp"],
+      "notes": "Pote PP rígido. Tapa aluminio - retírala antes."
+    },
+    "7806500000056": {
+      "name": "Yogurt Colun 120g",
+      "brand": "Colun",
+      "materials": ["pp"]
+    },
+    "7800100000019": {
+      "name": "Atún Robinson Crusoe en agua",
+      "brand": "Robinson Crusoe",
+      "materials": ["latas_acero"],
+      "notes": "Lata de acero. Enjuagar antes."
+    },
+    "7800100000026": {
+      "name": "Atún San José en agua",
+      "brand": "San José",
+      "materials": ["latas_acero"]
+    },
+    "7800100000033": {
+      "name": "Salsa de tomate Pomarola",
+      "brand": "Pomarola",
+      "materials": ["tetrapak"]
+    },
+    "7800100000040": {
+      "name": "Detergente Drive 3kg",
+      "brand": "Drive",
+      "materials": ["carton"],
+      "notes": "Caja de cartón. Vacíala completamente."
+    },
+    "7800100000057": {
+      "name": "Detergente Omo 3L líquido",
+      "brand": "Omo",
+      "materials": ["hdpe"],
+      "notes": "Botella HDPE opaca. Enjuagar y aplastar."
+    },
+    "7800200000019": {
+      "name": "Aceite Belmont 1L",
+      "brand": "Belmont",
+      "materials": ["pet"]
+    },
+    "7800200000026": {
+      "name": "Aceite Chef 1L",
+      "brand": "Chef",
+      "materials": ["pet"]
+    },
+    "7800300000017": {
+      "name": "Vino Concha y Toro 750ml",
+      "brand": "Concha y Toro",
+      "materials": ["vidrio"],
+      "notes": "Botella vidrio. Sin tapa."
+    },
+    "7800300000024": {
+      "name": "Vino Santa Rita 750ml",
+      "brand": "Santa Rita",
+      "materials": ["vidrio"]
+    },
+    "7800400000016": {
+      "name": "Champú Sedal 350ml",
+      "brand": "Sedal",
+      "materials": ["hdpe"],
+      "notes": "Botella HDPE. Enjuaga y al Punto Verde."
+    },
+    "7800400000023": {
+      "name": "Pasta dental Colgate 90g",
+      "brand": "Colgate",
+      "materials": ["otros"],
+      "notes": "Tubo multicapa - va a basura común."
+    },
+    "7800500000015": {
+      "name": "Galletas Tritón",
+      "brand": "Costa",
+      "materials": ["ldpe"],
+      "notes": "Bolsa PE flexible. Acumula bolsas y al Punto Verde."
+    },
+    "7800500000022": {
+      "name": "Galletas Oreo",
+      "brand": "Oreo",
+      "materials": ["ldpe"]
+    },
+    "7800600000014": {
+      "name": "Pan de molde Ideal",
+      "brand": "Ideal",
+      "materials": ["ldpe"],
+      "notes": "Bolsa LDPE."
+    },
+    "7800700000013": {
+      "name": "Cereal Zucosos",
+      "brand": "Nestlé",
+      "materials": ["carton", "ldpe"],
+      "notes": "Caja de cartón externa + bolsa interna LDPE. Sepáralas."
+    },
+    "7800800000012": {
+      "name": "Manjar Soprole 250g",
+      "brand": "Soprole",
+      "materials": ["pp"]
+    }
+  }
+}
